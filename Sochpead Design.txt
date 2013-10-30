@@ -1,0 +1,44 @@
+Sochpead Design. 
+
+Big Picture: 
+The site will have only 4 tabs. Social, Charity, Personalize and Advertize. 
+
+Rules: 
+1.Home page is welcome page. It will have a big window in the centre. This window will have a video on left, sign in/sign up on right. It can be 	  skipped. 
+2. Landing page is Social page. No login necessary to view. To wow or comment login is required.
+3. Once sign up is clicked, this window scrolls to left and a new window scrolls from right. This new window is larger and the input form is fitted. This sign up window doesnt scroll. On the bottom of the screen you have steps 1 2 3 etc. User will click on this and finish up the form. Recaptcha will be used to sign up. 
+
+Behind the scenes:
+	Users:
+	Once a user decides to create a profile, he/she will include all the information about them and their body. So along with just asking details about the name,age,sex,location other information like height, weight, skin color, race,body type etc are asked. 
+	
+	
+	Image Processing:
+	When a user uploads his/her picture, they will have to select an area which they want to showcase. For example a guy wants to showcase his shirt, then when prompted he will select the area for a close up shot.So for every picture he uploads, our system needs to take one or two closeup shots of the item.They will be uploaded for each session as well. 
+
+Social: 
+Social tab's main idea is to showcase yourself and your tastes to public. User in the beginning will enter his /her entire information about their body and then they will showcase themselves (ideally. they can showcase any person/pets/furnishings as well) with pictures and videos. This will help similar people gather their interests instead of always looking at a perfect model. So if a fat indian guy with narrow face and shoulders wants to show off his ralph lauren shirt, it will help me in figuring out if that will work out for me or not).When a user showcases something really nice, he will get lot of hits and wows. Once lot of wows are recieved, they are converted into sochpead points which can be used to buy products.
+
+This tab will have unlimited tiles. Any scrolldown will get some more tiles and this functionality will be implemented in Ajax. 
+	General Tile: 
+	Each tile, will have a picture, on the top,tile will have the name of the picture, on top right hand corner there will be a badge to show how many "wow" this picture has recieved. Below the picture, there will be a small profile pic and name of the uploader. Right next to the name, there will a "wow" button. A description of the picture will be below this name. Once this tile is clicked, it is forwarded to a next page. Left and right arrows are provided for the pic in the tile which will take you to next / prev picture.
+	
+	Expanded Tile:
+	Once a general Tile is clicked, it is forwarded to a next page, where tile becomes larger with a full resolution pic, and a new comments block will be displayed below the description. Left and right arrows are provided for the pic in the tile which will take you to next / prev picture.
+	In this next page, this enlarged tile will be surrounded by other tiles from the same uploader.(Future: This new page will have tabs of user, similar items, linkages. )
+	
+	
+	
+	
+Charity: 
+Charity is done entirely by Sochpead. A sochpead brand is introduced. This brand will sell stuff. (What stuff?) This stuff is expensive, but once you buy this, a few number of similar products will be donated in your name. For example, if you buy a t-shirt from sochpead, any t-shirt, 10 t-shirts will be donated by sochpead with your personal message on the back of the t-shirt. The message could be 30 characters long.Below the message your name will be printed.
+
+Personalize: 
+Use Sochpead as a platform to create your products. Submit us designs, our production company will make it for you with rights to you and sochpead. You will be recognized as the creator,sochpead as authorized seller/dealer. You will have copyrights to the product but sochpead will be the only place where you could sell the product. 
+
+
+
+
+
+
+	

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="sochpead_v1" id="Project8110108" database="MySql" >
+	<schema name="sochpead_v1" schemaname="sochpead_v1" defo="y" >
+		<table name="scpa_manufacturer" >
+			<column name="scpa_manf_id" type="int" jt="4" mandatory="y" autoincrement="y" regexp_nulls="0" />
+			<column name="scpa_manf_info_id" type="int" length="100" jt="4" mandatory="y" regexp_nulls="0" />
+			<index name="pk_scpa_manufacturer" unique="PRIMARY_KEY" >
+				<column name="scpa_manf_id" />
+			</index>
+			<index name="idx_scpa_manufacturer" unique="NORMAL" >
+				<column name="scpa_manf_info_id" />
+			</index>
+			<fk name="fk_scpa_manufacturer" to_schema="sochpead_v1" to_table="scpa_manufacturer_info" >
+				<fk_column name="scpa_manf_info_id" pk="scpa_manf_info_id" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="scpa_manufacturer_info" >
+			<column name="scpa_manf_info_id" type="int" jt="4" mandatory="y" autoincrement="y" regexp_nulls="0" />
+			<column name="scpa_manf_name" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_manf_info_address" type="varchar" length="100" jt="12" />
+			<column name="scpa_manf_info_city" type="varchar" length="50" jt="12" />
+			<column name="scpa_manf_info_state" type="varchar" length="2" jt="12" />
+			<column name="scpa_manf_info_website" type="varchar" length="100" jt="12" />
+			<column name="scpa_manf_info_phone" type="varchar" length="10" jt="12" />
+			<index name="pk_scpa_manufacturer_info" unique="PRIMARY_KEY" >
+				<column name="scpa_manf_info_id" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="scpa_pro" />
+		<table name="scpa_user_address" >
+			<column name="scpa_user_address_id" type="bigint" length="100" jt="-5" mandatory="y" autoincrement="y" regexp_nulls="0" />
+			<column name="scpa_user_address_city" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_state" type="varchar" length="2" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_zip" type="varchar" length="5" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_type" type="varchar" length="2" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_phone" type="varchar" length="10" jt="12" />
+			<column name="scpa_user_address_phone_type" type="varchar" length="30" jt="12" />
+			<column name="scpa_user_address_createdt" type="timestamp" length="100" jt="93" mandatory="y" regexp_nulls="0" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<column name="scpa_user_address_updatedt" type="timestamp" jt="93" />
+			<column name="scpa_user_address_create_user" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_update_user" type="varchar" length="100" jt="12" />
+			<index name="pk_scpa_user_address" unique="PRIMARY_KEY" >
+				<column name="scpa_user_address_id" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="scpa_user_billing_info" >
+			<column name="scpa_user_address_id" type="bigint" length="100" jt="-5" mandatory="y" autoincrement="y" regexp_nulls="0" />
+			<column name="scpa_user_address_city" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_state" type="varchar" length="2" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_zip" type="varchar" length="5" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_type" type="varchar" length="2" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_phone" type="varchar" length="10" jt="12" />
+			<column name="scpa_user_address_phone_type" type="varchar" length="30" jt="12" />
+			<column name="scpa_user_address_createdt" type="timestamp" length="100" jt="93" mandatory="y" regexp_nulls="0" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<column name="scpa_user_address_updatedt" type="timestamp" jt="93" />
+			<column name="scpa_user_address_create_user" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_address_update_user" type="varchar" length="100" jt="12" />
+			<index name="pk_scpa_user_address_0" unique="PRIMARY_KEY" >
+				<column name="scpa_user_address_id" />
+			</index>
+		</table>
+		<table name="scpa_user_images" >
+			<column name="scpa_user_id" type="bigint" jt="-5" mandatory="y" autoincrement="y" regexp_nulls="0" />
+			<column name="scpa_user_imgname" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_display_imgdescription" type="char" length="1" jt="1" >
+				<defo>&#039;Y&#039;</defo>
+			</column>
+			<column name="scpa_img_description" type="varchar" length="150" jt="12" />
+			<column name="scpa_user_img_createdt" type="timestamp" jt="93" mandatory="y" regexp_nulls="0" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<column name="scpa_user_img_location" type="varchar" length="200" jt="12" mandatory="y" regexp_nulls="0" />
+			<index name="pk_scpa_user_images" unique="PRIMARY_KEY" >
+				<column name="scpa_user_id" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="scpa_user_posts" >
+			<column name="scpa_user_posts_id" type="bigint" jt="-5" mandatory="y" autoincrement="y" regexp_nulls="0" />
+			<column name="scpa_posts_name" type="varchar" length="100" jt="12" />
+			<column name="scpa_post_date" type="timestamp" jt="93" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_post_deletesw" type="char" length="1" jt="1" mandatory="y" regexp_nulls="0" >
+				<defo>&#039;N&#039;</defo>
+			</column>
+			<index name="pk_scpa_user_posts" unique="PRIMARY_KEY" >
+				<column name="scpa_user_posts_id" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="scpa_user_profile" >
+			<column name="scpa_user_id" type="bigint" jt="-5" mandatory="y" autoincrement="y" regexp_nulls="0" />
+			<column name="scpa_username" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_password" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_firstname" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_lastname" type="varchar" length="100" jt="12" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_email" type="int" jt="4" mandatory="y" regexp_nulls="0" />
+			<column name="scpa_user_id_createdt" type="timestamp" jt="93" mandatory="y" regexp_nulls="0" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<column name="scpa_user_active_sw" type="char" length="1" jt="1" mandatory="y" regexp_nulls="0" >
+				<defo>&#039;Y&#039;</defo>
+			</column>
+			<index name="pk_scpa_user_profile" unique="PRIMARY_KEY" >
+				<column name="scpa_user_id" />
+			</index>
+			<fk name="fk_scpa_user_profile" to_schema="sochpead_v1" to_table="scpa_user_address" >
+				<fk_column name="scpa_user_id" pk="scpa_user_address_id" />
+			</fk>
+			<fk name="fk_scpa_user_profile_0" to_schema="sochpead_v1" to_table="scpa_user_images" delete_action="cascade" update_action="cascade" >
+				<fk_column name="scpa_user_id" pk="scpa_user_id" />
+			</fk>
+			<fk name="fk_scpa_user_profile_1" to_schema="sochpead_v1" to_table="scpa_user_posts" delete_action="cascade" update_action="cascade" >
+				<fk_column name="scpa_user_id" pk="scpa_user_posts_id" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+	</schema>
+	<layout id="Layout8110109" name="sochpead_v1" show_relation_columns="y" >
+		<entity schema="sochpead_v1" name="scpa_manufacturer" color="a8c4ef" x="570" y="180" />
+		<entity schema="sochpead_v1" name="scpa_manufacturer_info" color="a8c4ef" x="525" y="345" />
+		<entity schema="sochpead_v1" name="scpa_user_posts" color="a8c4ef" x="330" y="45" />
+		<entity schema="sochpead_v1" name="scpa_user_images" color="a8c4ef" x="300" y="180" />
+		<entity schema="sochpead_v1" name="scpa_user_profile" color="a8c4ef" x="45" y="60" />
+		<entity schema="sochpead_v1" name="scpa_user_address" color="a8c4ef" x="60" y="300" />
+		<entity schema="sochpead_v1" name="scpa_user_billing_info" color="a8c4ef" x="270" y="375" />
+		<script name="Schema_v1.sql" id="SQL6104182" file="file:/C:/Personal/Krishna/Projects/Sochpead/Schema_v1.sql" />
+	</layout>
+</project>
