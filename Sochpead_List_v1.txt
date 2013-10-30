@@ -3,5 +3,8 @@
 	Logo should have transparent background so that I can put it in any web color scheme.
 	Logo can also be made of pictures which will spell out the name.
 	
-2. Website inspiration. http://www.zocdoc.com/
+2. Website inspirations 
+	http://www.zocdoc.com/
+	http://www.so.cl/
+	
 3.
