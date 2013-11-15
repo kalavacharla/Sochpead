@@ -3,6 +3,8 @@
 	Logo should have transparent background so that I can put it in any web color scheme.
 	Logo can also be made of pictures which will spell out the name.
 	
+NOTE: If logo is good enough, check out if they can do a color scheme for us.
+	
 2. Website inspirations 
 	http://www.zocdoc.com/
 	http://www.so.cl/
